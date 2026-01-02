@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "TTLakesNeueTrialMedium";
+  src: url(./font/TT\ Lakes\ Neue\ Trial\ Medium.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "TTLakesNeueTrialExtraLight";
+  src: url(./font/TT\ Lakes\ Neue\ Trial\ ExtraLight.ttf) format("truetype");
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(148, 154, 159);
+  font-family: "TTLakesNeueTrialMedium";
+  font-size: 500;
+  color: #141212;
+}
+
+/*-------------------------------------------*/
+header {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+}
+h2 {
+  padding: 15px 16px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #7e7e82;
+  font-family: "TTLakesNeueTrialExtraLight";
+  letter-spacing: -0.2px;
+}
+.content {
+ 
+  background: #f8f8f8;
+}
+
+.mobile-swiper {
+  padding-bottom: 30px;
+  padding-top: 16px;
+}
+.mobile-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 240px;
+  height: 72px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #eaeaea;
+}
+.swiper-slide:first-child {
+  margin-left: 16px;
+}
+.content-card,
+.hide-tablet,
+.hide-desktop {
+  display: none;
+}
+
+.swiper-pagination {
+  margin-bottom: -5px;
+}
+.seeMoreBtn {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1120px) {
+  h2 { 
+    width: 100%;
+    padding: 16px 24px;
+  }
+  .mobile-swiper {
+    display: none;
+  }
+
+  .hide-tablet {
+    display: none;
+  }
+
+  .content-card,
+  .hide-desktop {
+    width: 100%;
+    width: 240px;
+    height: 72px;
+    margin: 0 auto;
+
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .hide-tablet {
+    display: none;
+  }
+
+  .content {
+    height: auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px;
+
+    padding: 24px;
+  }
+
+  .seeMoreBtn {
+    padding-left: 35px;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+  }
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .force-show {
+    display: flex;
+  }
+}
+
+@media (min-width: 1120px) {
+  h2 {
+    padding: 15px 32px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .content-card,
+  .hide-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    width: 240px;
+    height: 72px;
+    margin: 0 auto;
+
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #eaeaea;
+  }
+  .hide-desktop {
+    display: none;
+  }
+
+  .swiper-slide,
+  .mobile-swiper {
+    display: none;
+  }
+
+  .seeMoreBtn {
+    padding-top: 24px;
+    padding-left: 35px;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+  }
+  button {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .force-show {
+    display: flex;
+  }
+}
