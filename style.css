@@ -29,6 +29,7 @@ header {
   background-color: #ffffff;
   width: 100%;
   height: auto;
+  border-top: 1px solid rgba(217, 255, 245, 1);
 }
 h2 {
   padding: 15px 16px;
@@ -39,7 +40,6 @@ h2 {
   letter-spacing: -0.2px;
 }
 .content {
- 
   background: #f8f8f8;
 }
 
@@ -50,14 +50,16 @@ h2 {
 .mobile-swiper .swiper-slide {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 16px;
+  gap: 16px;
   width: 240px;
   height: 72px;
   background: #fff;
   border-radius: 5px;
   border: 1px solid #eaeaea;
 }
-.swiper-slide:first-child {
+.mobile-swiper .swiper-slide:first-child {
   margin-left: 16px;
 }
 .content-card,
@@ -69,12 +71,12 @@ h2 {
 .swiper-pagination {
   margin-bottom: -5px;
 }
-.seeMoreBtn {
+.see-more-btn {
   display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
-  h2 { 
+  h2 {
     width: 100%;
     padding: 16px 24px;
   }
@@ -99,7 +101,8 @@ h2 {
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 16px;
   }
   .hide-tablet {
     display: none;
@@ -117,7 +120,7 @@ h2 {
     padding: 24px;
   }
 
-  .seeMoreBtn {
+  .see-more-btn {
     padding-left: 35px;
     display: flex;
     align-content: center;
@@ -128,6 +131,17 @@ h2 {
     outline: none;
     background: transparent;
     cursor: pointer;
+  }
+  #toggleBtn span {
+    font-family: "TTLakesNeueTrialMedium";
+    color: rgba(27, 28, 33, 1);
+    font-weight: 500;
+  }
+  .see-more-btn img {
+    transition: transform 0.3s ease;
+  }
+  .see-more-btn img.rotated {
+    transform: rotate(180deg);
   }
   .force-show {
     display: flex;
@@ -149,7 +163,8 @@ h2 {
   .hide-tablet {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 16px;
     width: 100%;
     width: 240px;
     height: 72px;
@@ -168,20 +183,42 @@ h2 {
     display: none;
   }
 
-  .seeMoreBtn {
-    padding-top: 24px;
+  .see-more-btn {
     padding-left: 35px;
     display: flex;
-    align-content: center;
+    align-items: center;
     gap: 10px;
+    transition: padding-top 0.3s ease;
   }
+
+  .see-more-btn.open {
+    padding-top: 22px;
+  }
+  .see-more-btn img {
+    transition: transform 0.3s ease;
+  }
+  .see-more-btn img.rotated {
+    transform: rotate(180deg);
+  }
+
   button {
     border: none;
     outline: none;
     background: transparent;
     cursor: pointer;
   }
+  #toggleBtn span {
+    font-family: "TTLakesNeueTrialMedium";
+    color: rgba(27, 28, 33, 1);
+    font-weight: 500;
+  }
+  .see-more-btn img {
+    transition: transform 0.3s ease;
+  }
+  .see-more-btn img.rotated {
+    transform: rotate(180deg);
+  }
   .force-show {
-    display: flex;
+    display: block;
   }
 }

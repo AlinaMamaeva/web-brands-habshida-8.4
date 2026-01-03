@@ -4,7 +4,7 @@ let swiper = null;
 function initSwiper() {
   if (window.innerWidth <= 767 && !swiper) {
     swiper = new Swiper(".mobile-swiper", {
-      slidesPerView: 1.5,
+      slidesPerView: "auto",
       spaceBetween: 16,
       loop: true,
       pagination: {
@@ -34,14 +34,20 @@ window.addEventListener("resize", initSwiper);
 
 // Кнопка показать/скрыть
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("toggle-btn");
+ const wrapper = document.querySelector(".see-more-btn");
+  const btn = document.getElementById("toggleBtn");
+  const icon = wrapper.querySelector("img");
   const hiddenSlides = document.querySelectorAll(".hide-tablet, .hide-desktop");
   let isOpen = false;
 
   btn.addEventListener("click", () => {
     hiddenSlides.forEach((slide) => slide.classList.toggle("force-show"));
     isOpen = !isOpen;
-    btn.textContent = isOpen ? "Скрыть" : "Показать все";
+    btn.querySelector("span").textContent = isOpen ? "Скрыть" : "Показать все";
+
+    icon.classList.toggle("rotated");
+
+    btn.classList.toggle("open", isOpen);
   });
 });
 
