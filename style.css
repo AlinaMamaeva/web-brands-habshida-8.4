@@ -26,10 +26,11 @@ body {
 
 /*-------------------------------------------*/
 header {
-  background-color: #ffffff;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(248, 248, 248, 1));
   width: 100%;
   height: auto;
   border-top: 1px solid rgba(217, 255, 245, 1);
+
 }
 h2 {
   padding: 15px 16px;
